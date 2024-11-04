@@ -17,7 +17,8 @@ public class SwitchDemo {
         switch (value) {
             case -1:
             case 0:
-                System.out.println("ZERO OR LESS");
+                System.out.print("ZERO");
+                System.out.println(" OR LESS");
                 break;
             case 1:
                 System.out.println("ONE");
@@ -28,6 +29,16 @@ public class SwitchDemo {
             default:
                 System.out.println("Unknown value");
                 break;
+        }
+
+        switch (value) {
+            case 1 -> {
+                System.out.print("ZERO");
+                System.out.print(" OR LESS");
+            }
+            case 2 -> System.out.println("ONE");
+            case 3 -> System.out.println("TWO");
+            default -> System.out.println("Unknown value");
         }
 
         System.out.println("FINISH");
