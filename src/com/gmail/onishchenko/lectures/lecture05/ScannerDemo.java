@@ -10,7 +10,9 @@ public class ScannerDemo {
         System.out.println("Enter a value (0-9): ");
         int value = scanner.nextInt();
         System.out.println("Entered value == " + value);
-        scanner.nextLine();
+//        scanner.nextLine();
+        int anotherValue = scanner.nextInt();
+        System.out.println("anotherValue = " + anotherValue);
         System.out.println("Enter a string value: ");
         String line = scanner.nextLine();
         System.out.printf("Line == '%s'\n", line);
