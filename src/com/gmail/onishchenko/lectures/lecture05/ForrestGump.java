@@ -7,13 +7,14 @@ public class ForrestGump {
         if (dangerLevel < 20) {
             System.out.print("All");
             System.out.print(" OK)");
+        } else if (dangerLevel < 50) {
+            System.out.println("Run, Forrest, run!");
         } else {
-            if (dangerLevel < 50) {
-                System.out.println("Run, Forrest, run!");
-            } else {
-                System.out.println("DANGER!!! RUUUUN!!!");
-            }
-        }
+            System.out.println("DANGER!!! RUUUUN!!!");
+        } /*else {
+
+        }*/
+
 
     }
 }
