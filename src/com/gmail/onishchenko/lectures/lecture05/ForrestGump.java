@@ -9,12 +9,15 @@ public class ForrestGump {
             System.out.print(" OK)");
         } else if (dangerLevel < 50) {
             System.out.println("Run, Forrest, run!");
+            int hiddenValue = 42;
         } else {
             System.out.println("DANGER!!! RUUUUN!!!");
+//            System.out.println(hiddenValue); // error
         } /*else {
 
         }*/
 
+//        System.out.println(hiddenValue); // error
 
     }
 }
