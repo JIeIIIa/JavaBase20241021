@@ -6,11 +6,8 @@ public class TernaryOperator {
         int a = 10;
         int b = 25;
 
-        if (a > b) {
-           result = 1;
-        } else {
-            result = -1;
-        }
+        result = a > b ? 1 : -1;
+
 
         System.out.println(result);
     }
