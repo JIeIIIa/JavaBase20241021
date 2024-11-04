@@ -6,14 +6,14 @@ public class ConditionDemo {
         int b = 11;
 
         System.out.println(" AND ");
-        if ((a % 2 == 0) & (b % 2 == 0)) {
+        if ((a % 2 == 0) && (b % 2 == 0)) {
             System.out.println("00");
         } else {
             System.out.println("Unexpected");
         }
 
         System.out.println(" OR ");
-        if ((a % 2 == 0) | (b % 2 == 0)) {
+        if ((a % 2 == 0) || (b % 2 == 0)) {
             System.out.println("00 or 10 or 01");
         } else {
             System.out.println("Unexpected");
@@ -26,6 +26,13 @@ public class ConditionDemo {
         } else {
             System.out.println("Unexpected");
         }
+
+        String line = null;//"qwerty";
+        if (line != null && line.length() > 5) {
+            System.out.println("Very long line");
+        }
+
+        System.out.println("FINISH");
 
     }
 }
