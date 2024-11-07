@@ -11,7 +11,22 @@ public class Lecture06Demo {
 //        forDemo2();
 //        forLoopDemo3();
 //        whileDemo();
-        doWhileDemo();
+//        doWhileDemo();
+
+        int firstPrice = 12;
+        int price2 = 1765;
+        int price3 = 22;
+        int price4 = 7;
+
+        int[] prices = new int[4];
+        prices[0] = 12;
+        prices[1] = 1765;
+        prices[2] = 22;
+        prices[3] = 7;
+
+        System.out.println(prices[1]);
+        prices[2] = 22;
+        System.out.println(prices[2]);
     }
 
     private static void doWhileDemo() {
