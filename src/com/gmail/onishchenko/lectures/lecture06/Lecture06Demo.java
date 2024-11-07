@@ -18,21 +18,32 @@ public class Lecture06Demo {
         int price3 = 22;
         int price4 = 7;
 
-        System.out.println("PRICES: ");
-        int[] prices = {12, 1765, 22, 7, 5, 10};
-        for (int current : prices) {
-//            System.out.println("price#" + i + " == " + prices[i]);
-            System.out.println(current);
-        }
-//        prices[0] = 12;
-//        prices[1] = 1765;
-//        prices[2] = 22;
-//        prices[3] = 7;
+        int[] prices = {32, 54, 65, 23};
+        int[] newPrices = prices;
 
-        System.out.println("END PRICES");
-        System.out.println(prices[1]);
-        prices[2] = 22;
-        System.out.println(prices[2]);
+        System.out.println("PRICES: ");
+        for (int current : prices) {
+            System.out.print(current + "\t");
+        }
+        System.out.println("\nOld PRICES: ");
+        for (int current : newPrices) {
+            System.out.print(current + "\t");
+        }
+
+        prices[2] = -10000;
+        newPrices = new int[]{prices[2]};
+//        for (int i = 0; i < prices.length; i++) {
+//            newPrices[i] = prices[i];
+//        }
+
+        System.out.println("PRICES: ");
+        for (int current : prices) {
+            System.out.print(current + "\t");
+        }
+        System.out.println("\nOld PRICES: ");
+        for (int current : newPrices) {
+            System.out.print(current + "\t");
+        }
     }
 
     private static void doWhileDemo() {
