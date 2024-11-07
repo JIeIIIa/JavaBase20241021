@@ -20,9 +20,9 @@ public class Lecture06Demo {
 
         System.out.println("PRICES: ");
         int[] prices = {12, 1765, 22, 7, 5, 10};
-        for (int i = 0; i < prices.length; i++) {
+        for (int current : prices) {
 //            System.out.println("price#" + i + " == " + prices[i]);
-            System.out.println(prices[i]);
+            System.out.println(current);
         }
 //        prices[0] = 12;
 //        prices[1] = 1765;
