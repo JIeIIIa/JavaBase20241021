@@ -10,8 +10,25 @@ public class Lecture06Demo {
 //        forDemo1();
 //        forDemo2();
 //        forLoopDemo3();
+        whileDemo();
 
+    }
 
+    private static void whileDemo() {
+        int i = 1;
+        while (i < 11) {
+            int j = 1;
+            while (j < 11) {
+                int value = i * j;
+                System.out.printf("%5d", value);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
+
+        System.out.println("Final i == " + i);
+//        System.out.println("Final j == " + j); // error
     }
 
     private static void forLoopDemo3() {
