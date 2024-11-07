@@ -10,12 +10,29 @@ public class Lecture06Demo {
 //        forDemo1();
 //        forDemo2();
 //        forLoopDemo3();
-        whileDemo();
+//        whileDemo();
+        doWhileDemo();
+    }
 
+    private static void doWhileDemo() {
+        System.out.println(" DO-WHILE DEMO");
+        int i = 1;
+        do {
+            int j = 1;
+            while (j < 11) {
+                int value = i * j;
+                System.out.printf("%5d", value);
+                j++;
+            }
+            System.out.println();
+            i++;
+        } while (i < 11);
+        System.out.println("Final i == " + i);
     }
 
     private static void whileDemo() {
-        int i = 1;
+        System.out.println(" WHILE DEMO");
+        int i = 100;
         while (i < 11) {
             int j = 1;
             while (j < 11) {
