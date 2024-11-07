@@ -18,12 +18,18 @@ public class Lecture06Demo {
         int price3 = 22;
         int price4 = 7;
 
-        int[] prices = new int[4];
-        prices[0] = 12;
-        prices[1] = 1765;
-        prices[2] = 22;
-        prices[3] = 7;
+        System.out.println("PRICES: ");
+        int[] prices = {12, 1765, 22, 7, 5, 10};
+        for (int i = 0; i < prices.length; i++) {
+//            System.out.println("price#" + i + " == " + prices[i]);
+            System.out.println(prices[i]);
+        }
+//        prices[0] = 12;
+//        prices[1] = 1765;
+//        prices[2] = 22;
+//        prices[3] = 7;
 
+        System.out.println("END PRICES");
         System.out.println(prices[1]);
         prices[2] = 22;
         System.out.println(prices[2]);
