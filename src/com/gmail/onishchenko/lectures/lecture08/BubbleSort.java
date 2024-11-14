@@ -2,8 +2,8 @@ package com.gmail.onishchenko.lectures.lecture08;
 
 public class BubbleSort {
     public static void main(String[] args) {
-//        int[] array = {10, 3, 1, 6, 7, 2}; // {1, 2, 3, 6, 7, 10}
-        int[] array = {1, 2, 3, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+        int[] array = {10, 3, 1, 6, 7, 2}; // {1, 2, 3, 6, 7, 10}
+//        int[] array = {1, 2, 3, 6, 7, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
         print(array);
 
