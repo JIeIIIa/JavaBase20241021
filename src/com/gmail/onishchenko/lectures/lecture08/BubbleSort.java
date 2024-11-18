@@ -31,7 +31,27 @@ public class BubbleSort {
 
 
         print(array);
+        System.out.println("-= Binary search =-");
+        int number = 7;
+        int position = binarySort(array, number);
+        System.out.printf("%d at position %d", number, position);
+    }
 
+    public static int binarySort(int[] array, int number) {
+        int left = 0;
+        int right = array.length - 1;
+        do {
+            int middle = (left + right) / 2;
+            if (array[middle] > number) {
+                right = middle - 1;
+            } else if (array[middle] < number){
+                left = middle + 1;
+            } else {
+                return middle;
+            }
+
+        } while (left <= right);
+        return -1;
     }
 
     public static void print(int[] array) {
