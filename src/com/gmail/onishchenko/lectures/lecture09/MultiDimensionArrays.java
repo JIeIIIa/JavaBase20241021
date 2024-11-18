@@ -3,17 +3,24 @@ package com.gmail.onishchenko.lectures.lecture09;
 public class MultiDimensionArrays {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{
-                {1, 2, 3, 4},
-                {5, 6, 7, 8}
+                {1, 2, 3, 1, 2},
+                {5, 6, 7, 8},
+                {},
+                null
         };
         matrix[1][3] = 42;
 //        matrix[1][13] = -13; // error!
 
+
         for (int i = 0; i < matrix.length; i++) {
+            if (matrix[i] == null) {
+                continue;
+            }
+            System.out.print("[");
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + "\t");
             }
-            System.out.println();
+            System.out.println("]");
         }
 
         System.out.println("--------  CUBE  ---------");
