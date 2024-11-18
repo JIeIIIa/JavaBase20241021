@@ -2,6 +2,10 @@ package com.gmail.onishchenko.lectures.lecture09;
 
 public class MultiDimensionArrays {
     public static void main(String[] args) {
+        System.out.print("Income args: ");
+        printString(args);
+
+
         int[][] matrix = new int[4][];
 
         matrix[0] = new int[]{1, 2, 3, 1, 2};
@@ -45,6 +49,14 @@ public class MultiDimensionArrays {
         System.out.print("[");
         for (int element : array) {
             System.out.print(element + "\t");
+        }
+        System.out.println("]");
+    }
+
+    public static void printString(String[] array) {
+        System.out.print("[");
+        for (String line : array) {
+            System.out.print(line + "\t");
         }
         System.out.println("]");
     }
