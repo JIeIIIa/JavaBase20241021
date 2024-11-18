@@ -2,12 +2,12 @@ package com.gmail.onishchenko.lectures.lecture09;
 
 public class MultiDimensionArrays {
     public static void main(String[] args) {
-        int[][] matrix = new int[][]{
-                {1, 2, 3, 1, 2},
-                {5, 6, 7, 8},
-                {},
-                null
-        };
+        int[][] matrix = new int[4][];
+
+        matrix[0] = new int[]{1, 2, 3, 1, 2};
+        matrix[1] = new int[]{5, 6, 7, 8};
+        matrix[2] = new int[0];
+        ;
         matrix[1][3] = 42;
 //        matrix[1][13] = -13; // error!
 
@@ -23,6 +23,10 @@ public class MultiDimensionArrays {
             System.out.println("]");
         }
 
+//        cubeDemo();
+    }
+
+    private static void cubeDemo() {
         System.out.println("--------  CUBE  ---------");
         int[][][] cube = new int[5][3][4];
         for (int i = 0; i < cube.length; i++) {
