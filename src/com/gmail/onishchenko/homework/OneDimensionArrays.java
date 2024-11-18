@@ -97,6 +97,12 @@ public class OneDimensionArrays {
                 sum += array[i];
             }
             System.out.println("Sum of elements after the first negative == " + sum);
+            if (index == array.length - 1) {
+                System.out.println("No elements after the first negative");
+            } else {
+                double average = (double) sum / (array.length - index - 1);
+                System.out.println("Average == " + average);
+            }
         }
     }
 }
