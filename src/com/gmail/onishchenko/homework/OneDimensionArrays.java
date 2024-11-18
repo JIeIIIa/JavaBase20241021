@@ -5,8 +5,21 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class OneDimensionArrays {
     public static void main(String[] args) {
+        int size = readInt();
+        int[] array = generateArray(size);
+        print(array);
+        int sum = negativeSum(array);
+        System.out.println("Sum for elements less than zero == " + sum);
+
+        evenAndOddCounts(array);
+        maxMinStatistics(array);
+
+        sumAfterFirstNegative(array);
+    }
+
+    private static int readInt() {
         Scanner scanner = new Scanner(System.in);
-        int size = 30;
+        int size = 0;
         do {
             if (size < 0) {
                 System.out.println("Wrong length(((");
@@ -14,26 +27,37 @@ public class OneDimensionArrays {
             System.out.print("Enter an array length: ");
             size = scanner.nextInt();
         } while (size < 0);
+        return size;
+    }
+
+    private static int[] generateArray(int size) {
         int[] array = new int[size];
 
         for (int i = 0; i < array.length; i++) {
             array[i] = ThreadLocalRandom.current().nextInt(-100, 101);
         }
+        return array;
+    }
 
+    private static void print(int[] array) {
         System.out.print("[");
         for (int element : array) {
             System.out.print(element + "\t");
         }
         System.out.println("]");
+    }
 
+    private static int negativeSum(int[] array) {
         int sum = 0;
         for (int element : array) {
             if (element < 0) {
                 sum += element;
             }
         }
-        System.out.println("Sum for elements less than zero == " + sum);
+        return sum;
+    }
 
+    private static void evenAndOddCounts(int[] array) {
         int evenCount = 0;
         for (int element : array) {
             if (element % 2 == 0) {
@@ -41,7 +65,9 @@ public class OneDimensionArrays {
             }
         }
         System.out.printf("Even count == %d, odd count == %d\n", evenCount, array.length - evenCount);
+    }
 
+    private static void maxMinStatistics(int[] array) {
         int maxIndex = 0;
         int minIndex = 0;
         for (int i = 0; i < array.length; i++) {
@@ -54,7 +80,10 @@ public class OneDimensionArrays {
         }
         System.out.printf("max element == %d and has index %d\n", array[maxIndex], maxIndex);
         System.out.printf("min element == %d and has index %d\n", array[minIndex], minIndex);
+    }
 
+    private static void sumAfterFirstNegative(int[] array) {
+        int sum;
         int index = 0;
         while (index < array.length && array[index] >= 0) {
             index++;
