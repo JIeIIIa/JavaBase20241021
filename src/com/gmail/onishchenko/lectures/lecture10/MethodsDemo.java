@@ -13,11 +13,26 @@ public class MethodsDemo {
         System.out.println("x == " + findRoot(-12, 42));
         System.out.println("x - 42 == 0");
         System.out.println("x == " + findRoot(-42));
+
+        System.out.println("-= PRINT METHOD =-");
+        String[] lines = {"", "foo", "", "bar"};
+
+        print(lines);
+    }
+
+    public static void print(String[] lines) {
+        if ("".equals(lines[0])) {
+            System.out.println("Have to finish");
+            return;
+        }
+        for (int i = 0; i < lines.length; i++) {
+            System.out.println(lines[i]);
+        }
     }
 
     /**
      * a * x + b == 0;
-    * */
+     */
     public static double findRoot(double a, double b) {
         return -b / a;
     }
@@ -30,8 +45,13 @@ public class MethodsDemo {
 //        return -b / a;
 //    }
 
+    // missing return statement
 //    public static double findRoot(int a, int b) {
-//        return -b / (double) a;
+//        if (a == 0) {
+//            return 0;
+//        }
+////        return -b / (double) a;
+//        double result = - b / (double) a;
 //    }
 
 //    public static float findRoot(double a, double b) {
@@ -46,6 +66,6 @@ public class MethodsDemo {
      * x + b == 0;
      */
     public static double findRoot(double b) {
-       return -b;
+        return -b;
     }
 }
