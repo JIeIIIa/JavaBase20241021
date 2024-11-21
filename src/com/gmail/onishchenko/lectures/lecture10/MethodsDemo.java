@@ -22,9 +22,17 @@ public class MethodsDemo {
         return -b / a;
     }
 
-    public static double findRoot(int a, int b) {
-        return -b / (double) a;
+    public static double findRoot(int a, double b) {
+        return -b / a;
     }
+
+//    public static double findRoot(double a, int b) {
+//        return -b / a;
+//    }
+
+//    public static double findRoot(int a, int b) {
+//        return -b / (double) a;
+//    }
 
 //    public static float findRoot(double a, double b) {
 //        return (float) (-b / a);
