@@ -12,5 +12,11 @@ public class DeviceRunner {
         anotherDevice.name = "anotherDevice";
         anotherDevice.describe();
 
+        Device fake = device;
+        fake.describe();
+        fake.name = "FAKE";
+        fake.describe();
+        device.describe();
+
     }
 }
