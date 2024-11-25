@@ -7,8 +7,8 @@ public class DeviceRunner {
         device.name = "First device";
         device.describe();
 
-        Device anotherDevice = new Device();
-        anotherDevice.imei = "007";
+        Device anotherDevice = new Device("007");
+//        anotherDevice.imei = "007";
         anotherDevice.name = "anotherDevice";
         anotherDevice.describe();
 
