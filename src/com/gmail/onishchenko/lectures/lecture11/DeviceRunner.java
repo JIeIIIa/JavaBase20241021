@@ -5,16 +5,12 @@ public class DeviceRunner {
         Device device = new Device();
         device.imei = "imei-0001";
         device.name = "First device";
-        describe(device);
+        device.describe();
 
         Device anotherDevice = new Device();
         anotherDevice.imei = "007";
         anotherDevice.name = "anotherDevice";
-        describe(anotherDevice);
+        anotherDevice.describe();
 
-    }
-
-    public static void describe(Device device) {
-        System.out.println(device.name + " has imei == " + device.imei);
     }
 }
