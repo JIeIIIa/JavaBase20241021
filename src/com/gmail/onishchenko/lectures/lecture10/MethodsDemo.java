@@ -18,15 +18,18 @@ public class MethodsDemo {
         String[] lines = {"", "foo", "", "bar"};
 
         print(lines);
+
+        stringDemo();
     }
 
     public static void print(String[] lines) {
         if ("".equals(lines[0])) {
             System.out.println("Have to finish");
             return;
-        }
-        for (int i = 0; i < lines.length; i++) {
-            System.out.println(lines[i]);
+        } else {
+            for (int i = 0; i < lines.length; i++) {
+                System.out.println(lines[i]);
+            }
         }
     }
 
@@ -67,5 +70,14 @@ public class MethodsDemo {
      */
     public static double findRoot(double b) {
         return -b;
+    }
+
+    public static void stringDemo() {
+        String line = "abcdrfg";
+        System.out.println("Length of line " + line.length());
+        char ch = line.charAt(2);
+        System.out.println("Char at position 3: " + ch);
+        char[] charArray = line.toCharArray();
+        System.out.println("Char at position 3: " + charArray[2]);
     }
 }
