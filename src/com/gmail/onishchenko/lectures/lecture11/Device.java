@@ -4,9 +4,9 @@ public class Device {
     String imei;
     String name;
 
-    public Device() {
-        imei = "NO IMEI";
-    }
+//    public Device() {
+//        imei = "NO IMEI";
+//    }
 
     public Device(String deviceImei) {
         imei = deviceImei;
