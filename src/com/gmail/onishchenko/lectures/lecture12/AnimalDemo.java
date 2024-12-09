@@ -9,6 +9,12 @@ public class AnimalDemo {
                 new Animal("cat", 1),
         };
         print(animals);
+
+        Cat cat = new Cat();
+        cat.name = "pretty cat";
+        cat.age = 2;
+        cat.color = "black";
+        cat.describeCat();
     }
 
     private  static void print(Animal[] animals) {
