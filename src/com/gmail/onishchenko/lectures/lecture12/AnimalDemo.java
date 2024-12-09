@@ -10,11 +10,12 @@ public class AnimalDemo {
         };
         print(animals);
 
-        Cat cat = new Cat();
-        cat.name = "pretty cat";
-        cat.age = 2;
-        cat.color = "black";
-        cat.describeCat();
+        Cat cat = new Cat("pretty cat", 2, "black");
+        cat.describe();
+
+        BritishCat britishCat = new BritishCat();
+        britishCat.describe();
+        britishCat.say();
     }
 
     private  static void print(Animal[] animals) {
