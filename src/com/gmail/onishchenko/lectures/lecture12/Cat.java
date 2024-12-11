@@ -12,6 +12,10 @@ public class Cat extends Animal {
         this.color = color;
     }
 
+    public Cat(String name, int age) {
+        super(name, age);
+    }
+
     @Override
     public void describe() {
         System.out.println(" -= CAT =-");
