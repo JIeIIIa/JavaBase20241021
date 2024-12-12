@@ -40,4 +40,9 @@ public class BankAccount {
     public void info() {
         System.out.println("I have: " + amount);
     }
+
+    @Override
+    public String toString() {
+        return "Overrided method) I have: " + amount;
+    }
 }
