@@ -7,7 +7,5 @@ public abstract class Pizza {
         this.name = name;
     }
 
-    public void make() {
-        System.out.println("Unknown receipt. Can't make " + name + " pizza");
-    }
+    public abstract void make();
 }
