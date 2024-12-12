@@ -8,6 +8,11 @@ public class PizzaDemo {
                 new DiabloPizza()/*,
                 new AbstractPizza("unknown pizza")*/ //AbstractPizza is abstract; cannot be instantiated
         };
+
+        print(pizzas);
+    }
+
+    private static void print(Pizza[] pizzas) {
         for (Pizza pizza : pizzas) {
             System.out.println("Pizza name is: " + ((AbstractPizza) pizza).getName());
             pizza.make();
