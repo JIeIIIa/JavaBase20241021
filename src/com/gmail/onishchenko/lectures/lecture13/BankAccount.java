@@ -45,4 +45,26 @@ public class BankAccount {
     public String toString() {
         return "Overrided method) I have: " + amount;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+//        if (getClass() != obj.getClass()) {
+//            return false;
+//        }
+        if (!(obj instanceof BankAccount)) {
+            return false;
+        }
+        BankAccount that = (BankAccount) obj;
+
+        return amount == that.amount;
+    }
+
+    @Override
+    public int hashCode() {
+//        return 31 * (31 * amount + cardNumber) + ;
+        return amount;
+    }
 }
