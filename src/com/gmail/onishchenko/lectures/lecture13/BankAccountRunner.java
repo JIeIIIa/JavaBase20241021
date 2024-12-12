@@ -5,7 +5,12 @@ public class BankAccountRunner {
         BankAccount account = new BankAccount(42000);
         account.info();
 
-        account.amount += 1000;
+        account.addMoney(-100000);
+        account.info();
+
+        System.out.println("-= Hack account =-");
+        Hacker hacker = new Hacker(account);
+        hacker.hack();
         account.info();
     }
 }

@@ -8,6 +8,10 @@ public class BankAccount {
     }
 
     public void addMoney(int value) {
+        if (amount + value < 0) {
+            System.out.println("You don't have enough money");
+            return;
+        }
         this.amount += value;
     }
 
