@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture13;
 
-public class BankAccount {
+public class BankAccount implements Cloneable {
     private int amount;
     private int cardNumber;
     private boolean blocked;
@@ -66,5 +66,10 @@ public class BankAccount {
     public int hashCode() {
 //        return 31 * (31 * amount + cardNumber) + ;
         return amount;
+    }
+
+    @Override
+    public BankAccount clone() throws CloneNotSupportedException {
+        return (BankAccount) super.clone();
     }
 }
