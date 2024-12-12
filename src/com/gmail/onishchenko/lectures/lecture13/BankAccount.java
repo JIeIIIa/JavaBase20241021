@@ -2,9 +2,31 @@ package com.gmail.onishchenko.lectures.lecture13;
 
 public class BankAccount {
     private int amount;
+    private int cardNumber;
+    private boolean blocked;
 
     public BankAccount(int amount) {
         this.amount = amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setCardNumber(int cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public int getCardNumber() {
+        return cardNumber;
+    }
+
+    public boolean isBlocked() {
+        return blocked;
     }
 
     public void addMoney(int value) {
