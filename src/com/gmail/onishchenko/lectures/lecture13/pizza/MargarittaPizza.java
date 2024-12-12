@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture13.pizza;
 
-public class MargarittaPizza extends Pizza {
+public class MargarittaPizza extends AbstractPizza {
     public MargarittaPizza() {
         super("Margaritta");
     }
