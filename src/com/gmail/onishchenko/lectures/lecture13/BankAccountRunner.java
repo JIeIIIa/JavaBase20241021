@@ -10,6 +10,7 @@ public class BankAccountRunner {
 
         System.out.println("-= Hack account =-");
         Hacker hacker = new Hacker(account);
+        hacker.info();
         hacker.hack();
         account.info();
     }

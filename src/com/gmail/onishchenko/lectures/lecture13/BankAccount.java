@@ -1,7 +1,7 @@
 package com.gmail.onishchenko.lectures.lecture13;
 
 public class BankAccount {
-    int amount;
+    private int amount;
 
     public BankAccount(int amount) {
         this.amount = amount;
