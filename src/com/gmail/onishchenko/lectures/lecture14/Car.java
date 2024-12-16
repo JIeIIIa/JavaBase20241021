@@ -2,8 +2,10 @@ package com.gmail.onishchenko.lectures.lecture14;
 
 public class Car {
     private Engine engine;
+    private String model;
 
-    public Car() {
+    public Car(String model) {
+        this.model = model;
     }
 
     public void setEngine(Engine engine) {
@@ -14,6 +16,7 @@ public class Car {
     public String toString() {
         return "Car{" +
                 "engine=" + engine +
+                ", model='" + model + '\'' +
                 '}';
     }
 
@@ -28,6 +31,7 @@ public class Car {
         public String toString() {
             return "Engine{" +
                     "model='" + model + '\'' +
+                    "in the car=" + Car.this.model +
                     '}';
         }
     }
