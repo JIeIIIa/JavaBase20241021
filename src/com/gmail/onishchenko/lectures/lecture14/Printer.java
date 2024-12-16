@@ -5,16 +5,20 @@ public class Printer {
         ConsolePrinter consolePrinter = new ConsolePrinter();
         print(consolePrinter);
 
-        class FormattedPrinter implements Printable {
+        Printable formattedPrinter = new Printable() {
+            private int field = 10;
 
             @Override
             public void print() {
                 System.out.print("Formatted: ");
+                someMethod();
+            }
+
+            private void someMethod() {
                 System.out.println(this);
             }
-        }
+        };
 
-        FormattedPrinter formattedPrinter = new FormattedPrinter();
         print(formattedPrinter);
     }
 
