@@ -6,25 +6,20 @@ public class Printer {
         print(consolePrinter);
 
         Printable formattedPrinter = new Printable() {
-            private int field = 10;
-
             @Override
             public void print() {
-                System.out.print("Formatted: ");
-                someMethod();
-            }
-
-//            @Override
-//            public void anotherMethod() {
-//
-//            }
-
-            private void someMethod() {
-                System.out.println(this);
+                System.out.println("Formatted: ");
+//                System.out.println(this);
             }
         };
 
+        Printable anotherPrinter = () -> {
+            System.out.print("Another printer: ");
+            System.out.println("some print");
+        };
+
         print(formattedPrinter);
+        print(anotherPrinter);
     }
 
     public static void print(Printable printable) {
