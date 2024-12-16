@@ -14,6 +14,11 @@ public class Printer {
                 someMethod();
             }
 
+//            @Override
+//            public void anotherMethod() {
+//
+//            }
+
             private void someMethod() {
                 System.out.println(this);
             }
@@ -31,6 +36,11 @@ public class Printer {
         public void print() {
             System.out.println(this);
         }
+
+//        @Override
+//        public void anotherMethod() {
+//
+//        }
 
         @Override
         public String toString() {
