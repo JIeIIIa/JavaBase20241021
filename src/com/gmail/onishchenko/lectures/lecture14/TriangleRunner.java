@@ -5,7 +5,7 @@ import static com.gmail.onishchenko.lectures.lecture14.Triangle.EDGE_COUNT;
 public class TriangleRunner {
     public static void main(String[] args) {
         System.out.println("Created edges: " + Triangle.Edge.getCreatedInstances());
-        int createdEdges = 0;
+        int createdEdges = 42;
         int[] sides = {3, 4, 5};
         Triangle.Edge blueEdge = new Triangle.Edge(5, "blue");
 
@@ -14,6 +14,10 @@ public class TriangleRunner {
                 super(length, color);
             }
 
+//            public void outerVariable() {
+//                System.out.println("Outer variable value == " + createdEdges); // local variables referenced from an inner class must be final or effectively final
+//            }
+
             @Override
             public String toString() {
                 return "BoldEdge{" + super.toString() + "}";
@@ -21,12 +25,14 @@ public class TriangleRunner {
         }
 
 
+        BoldEdge boldEdge = new BoldEdge(4, "green");
         Triangle triangle = new Triangle(new Triangle.Edge[]{
                 new Triangle.Edge(3, "black"),
-                new BoldEdge(4, "green"),
+                boldEdge,
                 blueEdge
         });
         createdEdges += 3;
+//        boldEdge.outerVariable();
         System.out.println(triangle);
 
         sides[0] = -123456;
