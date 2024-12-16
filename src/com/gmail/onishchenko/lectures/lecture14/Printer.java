@@ -11,6 +11,13 @@ public class Printer {
                 System.out.println("Formatted: ");
 //                System.out.println(this);
             }
+
+            @Override
+            public void consolePrint() {
+                System.out.println("Console printing...");
+                Printable.super.consolePrint();
+                System.out.println("Finish console printing...");
+            }
         };
 
         Printable anotherPrinter = () -> {
@@ -20,6 +27,9 @@ public class Printer {
 
         print(formattedPrinter);
         print(anotherPrinter);
+
+        formattedPrinter.consolePrint();
+        anotherPrinter.consolePrint();
     }
 
     public static void print(Printable printable) {
