@@ -8,9 +8,22 @@ public class TriangleRunner {
         int createdEdges = 0;
         int[] sides = {3, 4, 5};
         Triangle.Edge blueEdge = new Triangle.Edge(5, "blue");
+
+        class BoldEdge extends Triangle.Edge {
+            public BoldEdge(int length, String color) {
+                super(length, color);
+            }
+
+            @Override
+            public String toString() {
+                return "BoldEdge{" + super.toString() + "}";
+            }
+        }
+
+
         Triangle triangle = new Triangle(new Triangle.Edge[]{
                 new Triangle.Edge(3, "black"),
-                new Triangle.Edge(4, "green"),
+                new BoldEdge(4, "green"),
                 blueEdge
         });
         createdEdges += 3;
