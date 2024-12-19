@@ -1,6 +1,6 @@
 package com.gmail.onishchenko.lectures.lecture14;
 
-public class CarRunner {
+class PackagePrivateCarRunner  {
     public static void main(String[] args) {
 
         Car car = new Car("pretty car");

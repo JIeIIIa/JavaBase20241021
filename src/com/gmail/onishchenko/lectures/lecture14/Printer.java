@@ -30,19 +30,48 @@ public class Printer {
 
         formattedPrinter.consolePrint();
         anotherPrinter.consolePrint();
+
+        Printable customFormattedPrinter = new FormattedPrinter();
+        ((FormattedPrintable) customFormattedPrinter).formattedPrint();
+        customFormattedPrinter.print();
+
+        severalInterfaces();
+        staticMethodsInDifferentClasses();
+    }
+
+    private static void staticMethodsInDifferentClasses() {
+        System.out.println(" -= staticMethodsInDifferentClasses DEMO =-");
+        ConsolePrinter printer = new PrettyConsolePrinter();
+        printer.print();
+        printer.dangerMethod();
+    }
+
+    private static void severalInterfaces() {
+        System.out.println(" -= severalInterfaces DEMO =-");
+        EmailSender consolePrinter = new ConsolePrinter();
+        consolePrinter.print();
     }
 
     public static void print(Printable printable) {
         printable.print();
     }
 
-    public static class ConsolePrinter implements Printable {
+    public static class ConsolePrinter implements Printable, EmailSender {
+        public static void dangerMethod() {
+            System.out.println("Call dangerMethod in ConsolePrinter");
+        }
+
         @Override
         public void print() {
             System.out.println(this);
         }
 
-//        @Override
+        @Override
+        public void consolePrint() {
+            EmailSender.super.consolePrint();
+        }
+
+        //        @Override
 //        public void anotherMethod() {
 //
 //        }
@@ -53,4 +82,28 @@ public class Printer {
         }
     }
 
+    public static class PrettyConsolePrinter extends ConsolePrinter {
+        public static void dangerMethod() {
+            System.out.println("Call dangerMethod in PrettyConsolePrinter");
+        }
+
+        @Override
+        public void print() {
+            System.out.println("Call print in PrettyConsolePrinter");
+        }
+    }
+}
+
+class FormattedPrinter implements FormattedPrintable {
+
+    @Override
+    public void print() {
+        System.out.println("Call print method...");
+    }
+
+    @Override
+    public void formattedPrint() {
+        System.out.println("Call formattedPrint method...");
+
+    }
 }
