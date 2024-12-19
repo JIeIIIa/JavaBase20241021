@@ -34,12 +34,11 @@ public class TaskDemo {
         System.out.println("Another status from String is: " + anotherStatus);
 
         switch (anotherStatus) {
-            case TODO:
-                System.out.println("TODO behaviour");
-                break;
-            default:
-                System.out.println("Unknown behaviour");
-                break;
+            case TODO -> System.out.println("TODO behaviour");
+            default -> {
+                System.out.print("Unknown ");
+                System.out.println("behaviour");
+            }
         }
 
 //        task.setStatus(new Task.Status("FAKE STATUS")); // error! constructor is private
