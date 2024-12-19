@@ -1,4 +1,4 @@
-package com.gmail.onishchenko.homework.encapsulation;
+package com.gmail.onishchenko.homework.encapsulation.employee;
 
 public class EmployeeRunner {
     public static void main(String[] args) {

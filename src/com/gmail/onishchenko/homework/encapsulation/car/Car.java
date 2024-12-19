@@ -1,4 +1,4 @@
-package com.gmail.onishchenko.homework.encapsulation;
+package com.gmail.onishchenko.homework.encapsulation.car;
 
 public class Car {
     public void start() {
