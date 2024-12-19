@@ -1,40 +1,30 @@
 package com.gmail.onishchenko.lectures.lecture15;
 
 public class Task {
-    private static final String[] AVAILABLE_STATUSES = {
-            "TODO",
-            "IN_PROGRESS",
-            "DONE"
+    private static final Status[] AVAILABLE_STATUSES = {
+            Status.TODO,
+            Status.IN_PROGRESS,
+            Status.DONE
     };
 
-    private String status;
+    private Status status;
     private String description;
 
-    public Task(String status, String description) {
+    public Task(Status status, String description) {
         setStatus(status);
         this.description = description;
     }
 
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
-        validate(status);
+    public void setStatus(Status status) {
         this.status = status;
     }
 
     public String getDescription() {
         return description;
-    }
-
-    private void validate(String status) {
-        for (String availableStatus : AVAILABLE_STATUSES) {
-            if(status.equals(availableStatus)) {
-                return;
-            }
-        }
-        throw new RuntimeException("Unexpected status: " + status);
     }
 
     @Override
@@ -43,5 +33,22 @@ public class Task {
                 "status='" + status + '\'' +
                 ", description='" + description + '\'' +
                 '}';
+    }
+
+    public static class Status {
+        public static final Status TODO = new Status("TODO");
+        public static final Status IN_PROGRESS = new Status("IN_PROGRESS");
+        public static final Status DONE = new Status("DONE");
+
+        private String name;
+
+        private Status(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public String toString() {
+            return name;
+        }
     }
 }
