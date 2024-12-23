@@ -1,13 +1,35 @@
 package com.gmail.onishchenko.lectures.lecture16;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class CalculatorTest {
+    private Calculator calculator;
+
+    @BeforeEach
+    void setUp() {
+        calculator = new Calculator();
+        System.out.println("before each");
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("after each");
+    }
+
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("before all");
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("after all");
+    }
+
     @Test
     void zero() {
+        System.out.println("zero");
         // give
-        Calculator calculator = new Calculator();
 
         // when
         long result = calculator.factorial(1);
@@ -18,9 +40,11 @@ public class CalculatorTest {
     }
 
     @Test
+    @DisplayName("new display name")
+    @Disabled(value = "temporary disable")
     void one() {
+        System.out.println("one");
         // give
-        Calculator calculator = new Calculator();
 
         // when
         long result = calculator.factorial(1);
@@ -32,8 +56,8 @@ public class CalculatorTest {
 
     @Test
     void three() {
+        System.out.println("three");
         // give
-        Calculator calculator = new Calculator();
         long expected = 6;
 
         // when
