@@ -40,14 +40,14 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("new display name")
-    @Disabled(value = "temporary disable")
+//    @DisplayName("new display name")
+//    @Disabled(value = "temporary disable")
     void one() {
         System.out.println("one");
         // give
 
         // when
-        long result = calculator.factorial(1);
+        long result = calculator.factorial(0);
 
         // then
         Assertions.assertNotNull(calculator);
